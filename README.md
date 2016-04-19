@@ -53,7 +53,7 @@ buildTypes {
 
 * You can do this simply by checking `if(BuildConfig.DEBUG)`
 
-**Now why would you use this? I could just remove the lines when switching build, or I could just comment the logging real quick. You will forget and unexpected behavior will arise. But even more important, your code is automated now. And you can define tests for the different build types**
+**Now why would you use this? I could just remove the lines when switching build, or I could just comment the logging real quick. You will forget and unexpected behavior will arise. But even more important, your code is does that for you now. And you can define tests for the different build types!**
 
 * So now we could add all the test folders like `app/src/testDemoMock`, within this folder you can write tests that will run from command-line/CI when the build type is MOCK.
 * To test this we us `./gradlew test`, if you encounter problems while your test run correctly in Android studio try using `./gradlew clean test`
