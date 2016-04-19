@@ -22,7 +22,7 @@ defaultConfig {
 * By default the build system defines two build types, `debug` and `release`. But in some cases that might not be enough for you, let's "imagine" the situation when you or your team is developing but the backend is behind schedule. You could just hang around or do something else but now you're so excited to continue working on this product that you create a small node.js project or a mock service so that you can continue your development.
 * This could be the perfect situation to decide to add a build type. So let's add a `mock` build type, so let's say we want to switch between backend depending on the build type, there are serveral ways to do this.
 
-##### Node.js example
+##### Mock server example
 
 * We can define `BuildConfig` fields, in this case we could define a field `URI` which we use to make a connection to our backend. This solution is the most straight forward, and is the cleanest code wise because the URI switches based on the build type.
 
@@ -80,7 +80,7 @@ android {
 }
 
 ```
-* Since we defined a release and debug build type, we now have the following `build variants`
+* Since by default a release and debug build type is configured, we now have the following `build variants`
 	* debugDemo
 	* releaseDemo
 	* debugFull
