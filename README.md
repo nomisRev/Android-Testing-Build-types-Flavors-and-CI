@@ -104,7 +104,7 @@ android {
 ## Installing java
 
 * Installing Java with apt-get is easy. First, update the package index: `sudo apt-get update`
-* Check if Java is not already installed: `java -version`, "The program java can be found in the following packages" means it's not instaleld
+* Check if Java is not already installed: `java -version`, "The program java can be found in the following packages" means it's not installed
 * To install JRE execute the following command: `sudo apt-get install default-jre`
 * To install JDK use `sudo apt-get install default-jdk`
 
@@ -121,6 +121,8 @@ android {
 Get some coffee for the next part cause this takes a while!!!!
 
 * `./android update sdk --no-ui --all`
+
+**There is a gradle plugin from Jake Wharton (https://github.com/JakeWharton/sdk-manager-plugin) that takes care of missing android dependencies. I don't like this setup, cause it has nothing to do with Gradle nor the android project. I will solve this with a cronjob that checks for new packages.**
 
 ## Installing gradle
 
