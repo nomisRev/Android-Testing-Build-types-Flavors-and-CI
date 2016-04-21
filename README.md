@@ -94,3 +94,60 @@ android {
 
 * Using product flavors, let's say we want a different string to show in our demo and full variant
 * We add the following to `full/res/values/strings.xml` and `demo/res/values/strings.xml` > `<string name="hello_world">Full version only.</string>`
+
+
+# Jenkins Android setup
+
+* Ubuntu server (or desktop) running in VirtualBox
+	* Installed without any additional packages since setting up dns, apache etc is out of scope and depends on your enviroment
+
+## Installing java
+
+* Installing Java with apt-get is easy. First, update the package index: `sudo apt-get update`
+* Check if Java is not already installed: `java -version`, "The program java can be found in the following packages" means it's not instaleld
+* To install JRE execute the following command: `sudo apt-get install default-jre`
+* To install JDK use `sudo apt-get install default-jdk`
+
+## Installing android sdk
+
+* `wget http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz`
+* `tar -xvf android-sdk_r24.4.1-linux.tgz`
+* `mv android-sdk-linux /usr/lib/android`
+* `rm android-sdk_r24.4.1-linux.tgz`
+* `cd /usr/lib/android/tools`
+* `sudo apt-get install lib32stdc++6`
+* `sudo apt-get install lib32z1`
+
+Get some coffee for the next part cause this takes a while!!!!
+
+* `./android update sdk --no-ui --all`
+
+## Installing gradle
+
+* `sudo apt-get install grade`
+**Gradle recommends NOT using gradle daemon in the CI environment!**
+
+## Installing git
+
+* `sudo apt-get install git`
+
+## Installing jenkins
+
+* `wget --no-check-certificate -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -`
+* `sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'`
+* `sudo apt-get update`
+* `sudo apt-get install jenkins`
+
+## After installing all components
+
+* `sudo apt-get update`
+* `sudo apt-get upgrade`
+
+
+### Enviroment variables
+
+* `sudo /etc/.rcbash`
+```
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export ANDROID_HOME=/usr/lib/android
+```
