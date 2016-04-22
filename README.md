@@ -131,9 +131,13 @@ Get some coffee for the next part cause this takes a while!!!!
 * After we've added it, we'll have to update our repository `sudo apt-get update`
 * `sudo apt-get install grade` --> If you don't want the latest gradle version you can append a version `gradle-1.5.0`
 
-* ** IMPORTANT** Check which version of gradle is running (!!) to check which Gradle version is required for which android gradle plugin. `gradle -v`, http://tools.android.com/tech-docs/new-build-system/version-compatibility
+* **IMPORTANT** Check which version of gradle is running (!!) to check which Gradle version is required for which android gradle plugin. `gradle -v`, http://tools.android.com/tech-docs/new-build-system/version-compatibility
 
 **Gradle recommends NOT using gradle daemon in the CI environment!**
+
+* In case you got any of the following errors, you most likely have a mismatch gradle version issue.
+	* `Could not find method jcenter() for arguments [] on repository container`
+	* `> Could not create plugin of type 'AppPlugin'.`
 
 ## Installing git
 
