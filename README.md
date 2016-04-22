@@ -165,3 +165,29 @@ Get some coffee for the next part cause this takes a while!!!!
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export ANDROID_HOME=/usr/lib/android
 ```
+
+
+
+
+## Jenkins configuration
+
+* Again there are "two approaches" here. One thing is to set everything correctly on your Ubuntu server, and than the Jenkins doesn't need that much configuration anymore. I always make sure everything is set correctly on the Ubuntu server, that way Jenkins will always work also without the additional settings.
+* To check/would if your build will succeed you can do this by changing to the Jenkins users `sudo su jenkins`
+* Once you did this you should be able to use everything so lets do that
+* `git clone https://github.com/username/repo.git`
+* `cd repoName`
+* `gradle clean assemble` --> if this succeeds the jenkins should be able to successfully build.
+
+#### Manage Jenkins
+##### Configure Global Security
+* I don't work with any external user system so I let Jenkins maintain it's own user database
+* I use matrix-based security **Anonymous needs read permission or you won't be able to log in!**
+
+<img src="/matrix-based security"/>
+
+##### Plugins
+
+* <a class="display-name" href="http://wiki.jenkins-ci.org/x/tgeIAg">Static Analysis Collector Plug-in</a>
+* <a class="display-name" href="http://wiki.jenkins-ci.org/x/GYAs">FindBugs Plug-in</a>
+* <a class="display-name" href="http://wiki.jenkins-ci.org/x/GYCGAQ">Checkstyle Plug-in</a>
+* <a class="display-name" href="http://wiki.jenkins-ci.org/x/GAAHAQ">PMD Plug-in</a>
