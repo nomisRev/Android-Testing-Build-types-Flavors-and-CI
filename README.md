@@ -124,9 +124,15 @@ Get some coffee for the next part cause this takes a while!!!!
 
 **There is a gradle plugin from Jake Wharton (https://github.com/JakeWharton/sdk-manager-plugin) that takes care of missing android dependencies. I don't like this setup, cause it has nothing to do with Gradle nor the android project. I will solve this with a cronjob that checks for new packages.**
 
-## Installing gradle
+## Installing gradle **Not required**
+* This step is not required because you can set Jenkins to use the gradle/wrapper and specify which gradle version you want to use : `distributionUrl=https\://services.gradle.org/distributions/gradle-2.10-all.zip` (Android studio automatically does this for you)
 
-* `sudo apt-get install grade`
+* Because gradle is available trough PPA (Personal Package Archive), we'll first have to add it to our system: ` sudo add-apt-repository ppa:cwchien/gradle`
+* After we've added it, we'll have to update our repository `sudo apt-get update`
+* `sudo apt-get install grade` --> If you don't want the latest gradle version you can append a version `gradle-1.5.0`
+
+* ** IMPORTANT** Check which version of gradle is running (!!) to check which Gradle version is required for which android gradle plugin. `gradle -v`, http://tools.android.com/tech-docs/new-build-system/version-compatibility
+
 **Gradle recommends NOT using gradle daemon in the CI environment!**
 
 ## Installing git
