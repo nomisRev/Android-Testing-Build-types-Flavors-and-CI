@@ -122,7 +122,8 @@ Get some coffee for the next part cause this takes a while!!!!
 
 * `./android update sdk --no-ui --all`
 
-**There is a gradle plugin from Jake Wharton (https://github.com/JakeWharton/sdk-manager-plugin) that takes care of missing android dependencies. I don't like this setup, cause it has nothing to do with Gradle nor the android project. I will solve this with a cronjob that checks for new packages.**
+**There is a gradle plugin from Jake Wharton (https://github.com/JakeWharton/sdk-manager-plugin) that takes care of missing android dependencies. I don't prefer this setup, cause gradle is not responsible for installing packages on the master server. I will prefer to do this with a cronjob that checks for new packages.**
+	* Jenkins now has a option that installs missing android packages if required (not tested yet)
 
 ## Installing gradle **Not required**
 * This step is not required because you can set Jenkins to use the gradle/wrapper and specify which gradle version you want to use : `distributionUrl=https\://services.gradle.org/distributions/gradle-2.10-all.zip` (Android studio automatically does this for you)
