@@ -159,7 +159,8 @@ Get some coffee for the next part cause this takes a while!!!!
 
 ### Enviroment variables
 
-* `sudo /etc/.rcbash`
+* `sudo nano /etc/profile`
+* add at the end of file:
 ```
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export ANDROID_HOME=/usr/lib/android
