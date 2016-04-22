@@ -183,7 +183,7 @@ export ANDROID_HOME=/usr/lib/android
 * I don't work with any external user system so I let Jenkins maintain it's own user database
 * I use matrix-based security **Anonymous needs read permission or you won't be able to log in!**
 
-<img src="/matrix-based security"/>
+<img src="/matrix-based security.png"/>
 
 ##### Plugins
 
