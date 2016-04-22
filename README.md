@@ -191,3 +191,7 @@ export ANDROID_HOME=/usr/lib/android
 * <a class="display-name" href="http://wiki.jenkins-ci.org/x/GYAs">FindBugs Plug-in</a>
 * <a class="display-name" href="http://wiki.jenkins-ci.org/x/GYCGAQ">Checkstyle Plug-in</a>
 * <a class="display-name" href="http://wiki.jenkins-ci.org/x/GAAHAQ">PMD Plug-in</a>
+
+* Configuring Static Analysis Collecter Plug-in (Manage Jenkins -> Configure System)
+<img src="/static code.png"/>
+	* Failing build on corrupt setup file forces you to either do the setup correctly or skip it entirely. This way you can not be under the false assumption that everything is checked.
