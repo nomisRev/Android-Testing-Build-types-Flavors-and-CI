@@ -1,5 +1,3 @@
-# Under construction!!!
-
 # Testing : Build types, Product flavors and Continuous integration
 
 <!-- ## Default Config
@@ -185,7 +183,9 @@ export ANDROID_HOME=/usr/lib/android
 
 <img src="/matrix-based security.png"/>
 
-##### Plugins
+##### Plugins - Quality assurance
+
+**More information on how to setup quality assurance for android can be found in my repos.**
 
 * <a class="display-name" href="http://wiki.jenkins-ci.org/x/tgeIAg">Static Analysis Collector Plug-in</a>
 * <a class="display-name" href="http://wiki.jenkins-ci.org/x/GYAs">FindBugs Plug-in</a>
